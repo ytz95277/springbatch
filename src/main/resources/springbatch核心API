@@ -1,0 +1,8 @@
+JobInstance:JobInstance和Job的关系类似Java中实例和类的关系,JobInstance就是该工作流程的一个具体实例.一个Job可以有多个JobInstance
+JobParameters:是一组可以贯穿整个Job的运行时配置参数,不同配置将产生不同的JobInstance
+JobExecution
+StepExecution
+ExecutionContext
+
+
+Flow是多个step的集合,可以被多个job复用,使用flowBuilder创建
