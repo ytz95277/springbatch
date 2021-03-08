@@ -41,7 +41,7 @@ public class JobListenerDemo {
     public Step stepListener() {
         return stepBuilderFactory.get("stepListener")
                 .<String,String>chunk(2)   //read,process,writer.每读两次后处理一次,泛型用于指定读写类型
-                .faultTolerant()
+                .faultTolerant()//容错
                 .listener(new MyChunkListener())
                 .reader(read())
                 .writer(writer())
